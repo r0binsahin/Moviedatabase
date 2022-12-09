@@ -1,0 +1,21 @@
+@mixin flexsettings {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@mixin buttons {
+
+    background-color: #02020a;
+    display: inline;
+    margin: 5px;
+    color: #82ff9e;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px;
+    
+}

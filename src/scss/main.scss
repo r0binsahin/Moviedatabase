@@ -1,0 +1,96 @@
+@use "mixins" as m;
+
+body {
+  background-color: #02020a;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagehead {
+  @include m.flexsettings;
+  color: #82ff9e;
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__desc {
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+.searchForm {
+  @include m.flexsettings;
+  
+  .searchInput {
+    margin: 5px;
+  }
+  
+  .searchButton {
+    margin: 5px;
+    background-color: #82ff9e;
+    font-weight: bold
+  
+  }
+
+}
+
+.infoBox {
+  @include m.flexsettings;
+
+  .descriptionText {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 100px;
+    margin: 100px;
+    color: pink;
+    border: 1px solid #82ff9e;
+  }
+}
+
+.resultsContainer {
+  .searchResults {
+    @include m.flexsettings;
+    flex-direction: row;
+    margin: 40px;
+
+    &__movie {
+      display: flex;
+      width: 20%;
+      flex-wrap: wrap;
+      margin: 20px;
+      padding: 10px;
+      border-left: 1px solid #82ff9e;
+      border-right: 1px solid #82ff9e;
+
+      &--poster {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+      }
+
+      &--title {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.buttonContainer {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  #prevPage,
+  #nextPage {
+    @include m.buttons;
+  }
+}
+
+#modal-body {
+  background-color: #e0ca3c;
+  color: white;
+  @include m.flexsettings;
+}
