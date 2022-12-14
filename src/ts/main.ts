@@ -20,7 +20,7 @@ const descriptionText: HTMLParagraphElement = document.createElement("p");
 infoBox.classList.add("infoBox");
 descriptionText.classList.add("descriptionText");
 descriptionText.innerHTML =
-  "Welcome to one of the biggest movie databases. You can search amoung over 4200 movies from all around the world. Type something in the searching area to find a movie.";
+  "Welcome to one of the biggest movie databases. You can search among over 4200 movies from all around the world. Type something in the searching area to find a movie.";
 
 const resultContainer: HTMLElement = document.createElement("main");
 const searchResults: HTMLDivElement = document.createElement("div");
