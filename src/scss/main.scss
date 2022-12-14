@@ -13,6 +13,7 @@ body {
   color: #82ff9e;
   &__title {
     font-size: 4rem;
+    padding-top: 30px;
   }
 
   &__desc {
@@ -57,7 +58,7 @@ body {
 
     &__movie {
       display: flex;
-      width: 20%;
+      //width: 20%;
       flex-wrap: wrap;
       margin: 20px;
       padding: 10px;
@@ -90,7 +91,19 @@ body {
 }
 
 #modal-body {
-  background-color: #e0ca3c;
+  background-color: #175524;
   color: white;
   @include m.flexsettings;
+}
+
+.modal-footer {
+  @include m.flexsettings;
+
+  .btn{
+  background-color: #175524;
+  border: none;
+  font-size: 2rem;
+  }
+
+
 }

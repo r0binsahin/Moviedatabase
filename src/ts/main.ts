@@ -1,8 +1,10 @@
 import * as dotenv from "dotenv";
 import { IMovies } from "./models/IMovies";
 import { IMovieExtented } from "./models/IMoviesExtended";
+import { IOmdbResponse } from "./models/IOmdbResponse";
 import { moreAboutMovies, searchMovies } from "./services/moviesService";
 dotenv.config();
+import axios from "axios";
 
 //--create HTML---------------------------------------------------------
 const pageHead: HTMLHeadElement = document.createElement("header");
@@ -113,7 +115,12 @@ const createHtml = (movies: IMovies[]) => {
     const title: HTMLHeadingElement = document.createElement("h3");
     const poster: HTMLImageElement = document.createElement("img");
 
-    movieInfo.classList.add("searchResults__movie");
+    movieInfo.classList.add(
+      "searchResults__movie",
+      "col-sm-12",
+      "col-md-5",
+      "col-lg-3"
+    );
     title.classList.add("searchResults__movie--title");
     poster.classList.add("searchResults__movie--poster");
 

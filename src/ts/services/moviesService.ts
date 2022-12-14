@@ -10,6 +10,7 @@ export async function searchMovies(
   let response = await axios.get<IOmdbResponse>(
     `http://omdbapi.com?s=${searchText}&apikey=${process.env.APIKEY}&page=${currentPage}`
   );
+
   return response.data.Search;
 }
 
