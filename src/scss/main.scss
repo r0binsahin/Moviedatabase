@@ -15,15 +15,14 @@ body {
     font-size: 4rem;
     padding-top: 30px;
   }
-
   &__desc {
     font-size: 1.5rem;
     color: white;
   }
 }
+
 .searchForm {
   @include m.flexsettings;
-  
   .searchInput {
     margin: 5px;
   }
@@ -32,9 +31,7 @@ body {
     margin: 5px;
     background-color: #82ff9e;
     font-weight: bold
-  
   }
-
 }
 
 .infoBox {
@@ -52,6 +49,7 @@ body {
 }
 
 .resultsContainer {
+
   .searchResults {
     @include m.flexsettings;
     flex-direction: row;
@@ -59,7 +57,6 @@ body {
 
     &__movie {
       display: flex;
-      //width: 20%;
       flex-wrap: wrap;
       margin: 20px;
       padding: 10px;
@@ -81,7 +78,6 @@ body {
 }
 
 .buttonContainer {
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,8 +101,6 @@ body {
   border: none;
   font-size: 2rem;
   }
-
-
 }
 
 @media screen and (min-width: 768px){
@@ -118,5 +112,4 @@ body {
       margin: 100px;
     }
   }
-  
 }

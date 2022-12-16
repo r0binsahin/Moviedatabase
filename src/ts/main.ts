@@ -71,25 +71,9 @@ buttonContainer.classList.add("buttonContainer");
 document.body.appendChild(buttonContainer);
 
 //---------------------------------------------------
-// searching by user input
 
 let currentPage: number = 1;
 let searchText: string = "";
-/*
-searchForm.addEventListener("input", async () => {
-  searchResults.innerHTML = "";
-  searchText = searchInput.value;
-
-  if (searchText.length > 2) {
-    let movies: IMovies[] = await searchMovies(searchText, currentPage);
-    movies = movies.sort((a: IMovies, b: IMovies) => {
-      if (+a.Year > +b.Year) return 1;
-      if (+a.Year < +b.Year) return -1;
-      return 0;
-    });
-    createHtml(movies);
-  }
-}); */
 
 searchForm.addEventListener("submit", async (event: SubmitEvent) => {
   event.preventDefault();
@@ -98,7 +82,7 @@ searchForm.addEventListener("submit", async (event: SubmitEvent) => {
   searchText = searchInput.value;
 
   if (searchText === "") {
-    descriptionText.innerHTML = "Type something to search";
+    descriptionText.innerHTML = "Type at least 3 letters to search";
   } else {
     disablePrevButton();
     let movies: IMovies[] = await searchMovies(searchText, currentPage);
@@ -183,8 +167,6 @@ function disablePrevButton() {
   }
 }
 
-//let currentPage: number = 1;
-
 nextButton.addEventListener("click", async () => {
   currentPage++;
   disablePrevButton();
@@ -207,5 +189,3 @@ prevButton.addEventListener("click", async () => {
     window.scrollTo(0, 0);
   }
 });
-
-//disablePrevButton();
