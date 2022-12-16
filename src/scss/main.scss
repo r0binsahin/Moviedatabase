@@ -42,11 +42,12 @@ body {
 
   .descriptionText {
     text-align: center;
-    font-size: 1.5rem;
-    padding: 100px;
-    margin: 100px;
+    padding: 20px;
+    margin:30px;
     color: pink;
     border: 1px solid #82ff9e;
+    font-size: 1rem;
+   
   }
 }
 
@@ -108,13 +109,13 @@ body {
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
    
   .infoBox {
     .descriptionText {
-      font-size: 1rem;
-      padding: 20px;
-      margin-top:20px;
+      font-size: 1.5rem;
+      padding: 100px;
+      margin: 100px;
     }
   }
   
